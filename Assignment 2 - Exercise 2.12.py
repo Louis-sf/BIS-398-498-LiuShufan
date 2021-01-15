@@ -6,7 +6,8 @@
 
        
 p=1000
-r=7
+# r needs to be a percentage value
+r=.07
 for n in range(10,31,10):
     p = p*(1+r/100)**n
     print("In year", n, "the return is: ", p)

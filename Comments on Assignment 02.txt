@@ -1,0 +1,3 @@
+Good job, though a few items. For 2.12 and 3.10, r should be .07 for 7 percent, not 7.
+
+For 3.16, supposed to find TWO largest numbers.

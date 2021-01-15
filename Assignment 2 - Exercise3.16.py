@@ -7,3 +7,4 @@ for i in range(9):
     if n>m:
         m=n
 print('the largest number you entered is ', m)        
+# SHoudl find TWO largest numbers
