@@ -1,64 +1,31 @@
 # 7.20 (Performance Analysis) 
-import timeit
-import random
-import numpy
-counts = [10**x for x in range(0,7)];
-def gen_list(size):
-   l = []
-   for i in range(size):
-       l.append(random.randint(0,7))
-
-def gen_array(size):
-   l = numpy.random.rand(size)
-
-print("Number of values\tList average execution time\tarray average execution time")
-for i in counts:
-  
-   list_timer = timeit.Timer(lambda: gen_list(i))
-   array_timer = timeit.Timer(lambda: gen_array(i))
-   print(f"{i}\t\t\t{list_timer.timeit(5)}\t\t{array_timer.timeit(5)}"
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-import random
 import numpy as np
+# for only one repetition
 
-counts = [10**x for x in range(0,7)];
+%timeit rolls_array = np.random.randint(1, 7, 1)
+%timeit rolls_list = [random.randrange(1, 7) for i in range(0, 1)]
 
+# for 10
+%timeit rolls_array = np.random.randint(1, 7, 10)
+%timeit rolls_list = [random.randrange(1, 7) for i in range(0,10)]
+# for 100
+%timeit rolls_array = np.random.randint(1, 7, 100)
+%timeit rolls_list = [random.randrange(1, 7) for i in range(0, 100)]
+# for 1000
+%timeit rolls_array = np.random.randint(1, 7, 1000)
+%timeit rolls_list = [random.randrange(1, 7) for i in range(0, 1000)]
+#for 10,000
+%timeit rolls_array = np.random.randint(1, 7, 10000)
+%timeit rolls_list = [random.randrange(1, 7) for i in range(0, 10000)]
 
-def gen_list(size):
-   l = []
-   for i in range(size):
-       l.append(random.randint(0,7))
+#for 100,000 
+%timeit rolls_array = np.random.randint(1, 7, 100000)
+%timeit rolls_list = [random.randrange(1, 7) for i in range(0, 100000)]
 
-def gen_array(size):
-   l = np.random.rand(size)
+#for 1,000,000
+%timeit rolls_array = np.random.randint(1, 7, 1000000)
+%timeit rolls_list = [random.randrange(1, 7) for i in range(0, 1000000)]
 
-print("Number of values\tList average execution time\tarray average execution time")
-for i in counts:
-   list_timer = %timeit gen_list(i)
-   array_timer = %timeit.Timer(lambda: gen_array(i))
-   print(f"{i}\t\t\t{list_timer.timeit(5)}\t\t{array_timer.timeit(5)}")
