@@ -1,3 +1,6 @@
+#There is som error in you call to the random number generator
+# Suggest using np.random...
+#7/10
 # 7.20 (Performance Analysis) 
 
 
